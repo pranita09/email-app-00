@@ -1,2 +1,3 @@
 # email-app-00
-Created with CodeSandbox
+Basic email app with Inbox, Sent, Details Page.
+(PS-9)
