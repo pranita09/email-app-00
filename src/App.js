@@ -12,8 +12,8 @@ export default function App() {
       <Routes>
         <Route path='/inbox' element={<Inbox/>} />
         <Route path='/sent' element={<Sent/>} />
-        <Route path='/inbox/:mailId' element={<IndividualMail/>}  />
-        <Route path='/sent/:mailId' element={<IndividualMail/>} />
+        <Route path='/details/:mailId' element={<IndividualMail/>}  />
+        {/* <Route path='/sent/:mailId' element={<IndividualMail/>} /> */}
       </Routes>
     </div>
   );

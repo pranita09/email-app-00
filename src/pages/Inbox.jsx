@@ -16,8 +16,8 @@ const Inbox = () =>{
                     emails.map((email)=>{
                         const {id, sender, subject, message, read} = email;
                         return(
-                            <li>
-                                <NavLink>{subject}</NavLink>
+                            <li key={id}>
+                                <NavLink to={`/details/${id}`}>{subject}</NavLink>
                                 { !read && (<button onClick={()=>handleReadBtn(email)}>Mark as read</button>)}
                             </li>
                         )
