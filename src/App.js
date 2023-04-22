@@ -1,10 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import "./styles.css";
+import Inbox from "./pages/Inbox";
+import Sent from "./pages/Sent";
+import IndividualMail from "./pages/IndividualMail";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="">
+      <Home />
+      <Routes>
+        <Route path='/inbox' element={<Inbox/>} />
+        <Route path='/sent' element={<Sent/>} />
+        <Route path='/inbox/:mailId' element={<IndividualMail/>}  />
+        <Route path='/sent/:mailId' element={<IndividualMail/>} />
+      </Routes>
     </div>
   );
 }
